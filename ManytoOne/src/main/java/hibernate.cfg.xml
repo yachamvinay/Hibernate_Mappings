@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-6.1.dtd">    
+<hibernate-configuration>  
+ <session-factory>
+   <!-- Echo all executed SQL to stdout -->
+    <property name="show_sql">true</property>
+    <!-- Drop and re-create the database schema on startup -->
+    <property name="hbm2ddl.auto">create-drop</property>
+<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/training1</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password">vinay123</property>
+<mapping class="com.greatlearning.Question" />
+ <mapping class="com.greatlearning.Answers" />
+</session-factory>
+ </hibernate-configuration>
